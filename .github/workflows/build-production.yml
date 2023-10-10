@@ -3,7 +3,7 @@ name: Build and push the tagged build to production
 on:
   push:
     tags:
-      - v2.*
+      - v*
 
 jobs:
   build_push_image:
@@ -14,7 +14,7 @@ jobs:
       
       - name: Fetch latest version
         id: fetch_version
-        run: echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+        run: echo "::setOutput name=TAG::${GITHUB_REF#refs/tags/}"
 
       - name: Docker Login
         uses: docker/login-action@v3.0.0
