@@ -1,0 +1,6 @@
+image:
+  registry:contosocontainerregistry22312
+  name: contoso-website
+  tag: latest
+dns:
+  name: d882b2f44982432e97cf.japaneast.aksapp.io
